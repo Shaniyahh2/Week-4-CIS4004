@@ -1,0 +1,129 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+}
+
+/* ===== NAVIGATION BUTTONS ===== */
+nav button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2a4f9c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #1e3870;
+}
+
+/* ===== JUMP MENU ===== */
+#jumpMenu {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    background-color: #e3ecff;
+}
+
+#recentArticles:hover + #jumpMenu {
+    display: block;
+}
+
+#jumpMenu li a {
+    display: block;
+    padding: 8px 12px;
+    color: #003a8c;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#jumpMenu li a:hover {
+    background-color: #cddcff;
+    color: #000066;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #2a4f9c;
+}
+
+/* ===== MAIN CONTENT ===== */
+main h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===== ARTICLE STYLING ===== */
+article {
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #cfd8ea;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    color: #666;
+    transition: all 2s ease;
+}
+
+article:hover {
+    color: #222;
+    transform: scale(1.02);
+}
+
+/* First letter styling */
+article p:first-of-type::first-letter {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
+/* Read more link + arrow */
+article a[href*="google.com"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0056cc;
+    text-decoration: none;
+}
+
+article a[href*="google.com"]::after {
+    content: url('arrowarrow.png');
+    width: 16px;
+    height: 16px;
+}
+
+/* ===== THANK YOU FOOTER ===== */
+#thanks {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #cfe0ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #8faee6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
